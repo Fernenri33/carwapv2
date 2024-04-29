@@ -8,6 +8,17 @@ $(document).ready(function() {
         var modelo_corolla = $("input[name='modelo_corolla']").is(":checked");
         var marca_honda = $("input[name='marca_honda']").is(":checked");
         var modelo_civic = $("input[name='modelo_civic']").is(":checked");
+        var marca_chevrolet = $("input[name='marca_chevrolet']").is(":checked");
+        var modelo_cruze = $("input[name='modelo_cruze']").is(":checked");
+        var marca_volkswagen = $("input[name='marca_volkswagen']").is(":checked");
+        var modelo_jetta = $("input[name='modelo_jetta']").is(":checked");
+        var modelo_golf = $("input[name='modelo_golf']").is(":checked");
+        var marca_mazda = $("input[name='marca_mazda']").is(":checked");
+        var modelo_mx5 = $("input[name='modelo_mx5']").is(":checked");
+        var marca_nissan = $("input[name='marca_nissan']").is(":checked");
+        var modelo_versa = $("input[name='modelo_versa']").is(":checked");
+        var modelo_maxima = $("input[name='modelo_maxima']").is(":checked");
+
 
         // Obtener los valores de los inputs de precio y año
         var minPrecio = $("#minPrecio").val();
@@ -23,6 +34,16 @@ $(document).ready(function() {
             modelo_corolla: modelo_corolla,
             marca_honda: marca_honda,
             modelo_civic: modelo_civic,
+            marca_chevrolet: marca_chevrolet,
+            modelo_cruze: modelo_cruze,
+            marca_volkswagen: marca_volkswagen,
+            modelo_jetta: modelo_jetta,
+            modelo_golf: modelo_golf,
+            marca_mazda: marca_mazda,
+            modelo_mx5: modelo_mx5,
+            marca_nissan: marca_nissan,
+            modelo_versa: modelo_versa,
+            modelo_maxima: modelo_maxima,
             minPrecio: minPrecio,
             maxPrecio: maxPrecio,
             minAnio: minAnio,

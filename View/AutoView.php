@@ -27,22 +27,38 @@
                 <p>Filtro</p>
                 <p>Marca</p>
                 <!-- Crear checkbox para cada marca -->
-                <span>Todas</span> <input type="checkbox" name="todas"> <br>
+                <span>Todas</span> <input type="checkbox" name="todas"> <br><br>
                 <span>Toyota</span> <input type="checkbox" name="marca_toyota"> <br>
                 <span style="padding-left: 20px;">Yaris</span> <input type="checkbox" name="modelo_yaris"> <br>
-                <span style="padding-left: 20px;">Corolla</span> <input type="checkbox" name="modelo_corolla"> <br>
+                <span style="padding-left: 20px;">Corolla</span> <input type="checkbox" name="modelo_corolla"> <br><br>
+                
                 <span>Honda</span> <input type="checkbox" name="marca_honda"> <br>
                 <span style="padding-left: 20px;">Civic</span> <input type="checkbox" name="modelo_civic"> <br><br>
+
+                <span>Chevrolet</span> <input type="checkbox" name="marca_chevrolet"> <br>
+                <span style="padding-left: 20px;">Cruze</span> <input type="checkbox" name="modelo_cruze"> <br><br>
+
+                <span>Volkswagen</span> <input type="checkbox" name="marca_volkswagen"> <br>
+                <span style="padding-left: 20px;">Jetta</span> <input type="checkbox" name="modelo_jetta"> <br>
+                <span style="padding-left: 20px;">Golf</span> <input type="checkbox" name="modelo_golf"> <br><br>
+
+                <span>Mazda</span> <input type="checkbox" name="marca_mazda"> <br>
+                <span style="padding-left: 20px;">MX5</span> <input type="checkbox" name="modelo_mx5"> <br><br>
+
+                <span>Nissan</span> <input type="checkbox" name="marca_nissan"> <br>
+                <span style="padding-left: 20px;">Versa</span> <input type="checkbox" name="modelo_versa"> <br>
+                <span style="padding-left: 20px;">Maxima</span> <input type="checkbox" name="modelo_maxima"> <br><br>
+
                 <!-- Inputs para filtrar por precio -->
                 <label for="minPrecio">Precio mínimo $:</label>
-                <input type="number" id="minPrecio" name="minPrecio" min="10000" max="50000" style="width: 60px;" step="10"> <br>
+                <input type="number" id="minPrecio" name="minPrecio" min="10000" max="100000" style="width: 80px;" step="10"> <br>
                 <label for="maxPrecio">Precio máximo $:</label>
-                <input type="number" id="maxPrecio" name="maxPrecio" min="50000" max="100000" style="width: 60px;" step="10"> <br><br>
+                <input type="number" id="maxPrecio" name="maxPrecio" min="10000" max="100000" style="width: 80px;" step="10"> <br><br>
                 <!-- Inputs para filtrar por año -->
                 <label for="minAnio">Año mínimo:</label>
-                <input type="number" id="minAnio" name="minAnio" min="1990" max="2024" style="width: 50px;"> <br>
+                <input type="number" id="minAnio" name="minAnio" min="1990" max="2024" style="width: 65px;"> <br>
                 <label for="maxAnio">Año máximo:</label>
-                <input type="number" id="maxAnio" name="maxAnio" min="1990" max="2024" style="width: 50px;"> <br><br>
+                <input type="number" id="maxAnio" name="maxAnio" min="1990" max="2024" style="width: 65px;"> <br><br>
 
                 <input type="submit" value="Enviar"> 
 

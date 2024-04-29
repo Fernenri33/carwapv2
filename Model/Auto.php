@@ -52,7 +52,7 @@ class Auto {
     return $autos;
   }  
 
-  public function filtrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $minPrecio, $maxPrecio, $minAnio, $maxAnio) {
+  public function filtrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima, $minPrecio, $maxPrecio, $minAnio, $maxAnio) {
     // Si "Todas" está seleccionada, simplemente devolver todos los autos
     if ($todas == "true") {
         return $this->getAll();
@@ -79,7 +79,36 @@ class Auto {
         if ($modelo_civic == "true") {
             $conditions[] = "Modelo = 'Civic'";
         }
-
+        if ($marca_chevrolet == "true") {
+            $conditions[] = "Marca = 'Chevrolet'";
+        }
+        if ($modelo_cruze == "true") {
+            $conditions[] = "Modelo = 'Cruze'";
+        }
+        if ($marca_volkswagen == "true") {
+            $conditions[] = "Marca = 'Volkswagen'";
+        }
+        if ($modelo_jetta == "true") {
+            $conditions[] = "Modelo = 'Jetta'";
+        }
+        if ($modelo_golf == "true") {
+            $conditions[] = "Modelo = 'Golf '";
+        }
+        if ($marca_mazda == "true") {
+            $conditions[] = "Marca = 'Mazda'";
+        }
+        if ($modelo_mx5 == "true") {
+            $conditions[] = "Modelo = 'MX-5'";
+        }
+        if ($marca_nissan == "true") {
+            $conditions[] = "Marca = 'Nissan'";
+        }
+        if ($modelo_versa == "true") {
+            $conditions[] = "Modelo = 'Versa'";
+        }
+        if ($modelo_maxima == "true") {
+            $conditions[] = "Modelo = 'Maxima'";
+        }
         // Agregar condiciones para el rango de precio y año si se proporcionan
         if ($minPrecio && $maxPrecio) {
             $conditions[] = "Precio >= $minPrecio AND Precio <= $maxPrecio";
