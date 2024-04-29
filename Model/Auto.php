@@ -92,7 +92,7 @@ class Auto {
             $conditions[] = "Modelo = 'Jetta'";
         }
         if ($modelo_golf == "true") {
-            $conditions[] = "Modelo = 'Golf '";
+            $conditions[] = "Modelo = 'Golf'";
         }
         if ($marca_mazda == "true") {
             $conditions[] = "Marca = 'Mazda'";
