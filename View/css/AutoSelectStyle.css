@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.card {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    max-width: 800px;
+}
+.card img {
+    height: 470px;
+    object-fit: cover;
+    flex: 1;
+}
+.card-body {
+    flex: 1;
+    padding: 20px;
+}
+.titleAS{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,32 @@
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+}
+
+.a {
+    padding-right: 50px;
+}
+
+.log {
+    margin-right: 10px; /* Mueve .log a la derecha */
+    display: flex;
+    align-items: center;
+}
+
+.divHeader {
+    background-color: #d7d8d8;
+    display: flex;
+    justify-content: space-between; /* Asegúrate de que haya espacio entre los elementos */
+    flex-direction: row;
+}
+.navegador .a {
+    color:black; /* Cambia el color de fuente a rojo (#FF0000) como ejemplo */
+}
+.login {
+    color:black;
+}

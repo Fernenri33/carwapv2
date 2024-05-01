@@ -1,0 +1,21 @@
+.footer {
+    background-color: #d7d8d8;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;;
+}
+
+.copy {
+    flex-grow: 1; /* Esto hará que ocupe todo el espacio disponible */
+}
+
+.logoF {
+    height: 50px;
+    margin-right: 10px;
+}

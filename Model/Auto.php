@@ -52,7 +52,7 @@ class Auto {
     return $autos;
   }  
 
-  public function filtrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima, $minPrecio, $maxPrecio, $minAnio, $maxAnio) {
+  public function FiltrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima, $minPrecio, $maxPrecio, $minAnio, $maxAnio) {
     // Si "Todas" está seleccionada, simplemente devolver todos los autos
     if ($todas == "true") {
         return $this->getAll();
@@ -137,6 +137,37 @@ class Auto {
         return $autos;
     }
 }
+
+public function GetByID($id) {
+    // Crear la consulta SQL para obtener el auto por su ID
+    $sql = "SELECT * FROM autos WHERE ID = $id";
+    // Ejecutar la consulta y obtener el resultado
+    $result = $this->conn->query($sql);
+    // Verificar si se encontró algún auto
+    $autos = array();
+    if ($result->num_rows > 0) {
+        // Obtener la fila del resultado
+        $row = $result->fetch_assoc();
+        // Crear un nuevo objeto Auto y establecer sus propiedades
+        $auto = new Auto();
+        $auto->setID($row['ID']);
+        $auto->setModelo($row['Modelo']);
+        $auto->setMarca($row['Marca']);
+        $auto->setAño($row['Año']);
+        $auto->setPrecio($row['Precio']);
+        $auto->setDescripción($row['Descripción']);
+        $auto->setImagenURL($row['ImagenURL']);
+
+        $autos[] = $auto;
+        
+        // Devolver el objeto Auto
+        return $autos;
+    } else {
+        // Si no se encuentra ningún auto con el ID proporcionado, devolver null
+        return null;
+    }
+}
+
 
 }
 ?>

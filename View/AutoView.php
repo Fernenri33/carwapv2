@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Catálogo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost/carwap/View/css/stylesAutoView.css">   
 </head>
+<main>
 <body>
     <?php
+    include 'Header.php';
     // Incluir el archivo de la clase Auto
     require_once 'C:\xampp\htdocs\carwap\Model\Auto.php';
 
@@ -28,26 +30,46 @@
                 <p>Marca</p>
                 <!-- Crear checkbox para cada marca -->
                 <span>Todas</span> <input type="checkbox" name="todas"> <br><br>
-                <span>Toyota</span> <input type="checkbox" name="marca_toyota"> <br>
+
+                <script>
+                function toggleModelos(marca) {
+                    var modelos = document.getElementById(marca + "-modelos");
+                    modelos.style.display = modelos.style.display === "none" ? "block" : "none";
+                    }
+                </script>
+
+                <span onclick="toggleModelos('toyota')">Toyota</span> <input type="checkbox" name="marca_toyota"> <span class="toggle-icon" onclick="toggleModelos('toyota')">▼</span> <br>
+                <div id="toyota-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Yaris</span> <input type="checkbox" name="modelo_yaris"> <br>
                 <span style="padding-left: 20px;">Corolla</span> <input type="checkbox" name="modelo_corolla"> <br><br>
-                
-                <span>Honda</span> <input type="checkbox" name="marca_honda"> <br>
+                </div>
+
+                <span onclick="toggleModelos('honda')">Honda</span> <input type="checkbox" name="marca_honda"> <span class="toggle-icon" onclick="toggleModelos('honda')">▼</span> <br>
+                <div id="honda-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Civic</span> <input type="checkbox" name="modelo_civic"> <br><br>
+                </div>
 
-                <span>Chevrolet</span> <input type="checkbox" name="marca_chevrolet"> <br>
+                <span onclick="toggleModelos('chevrolet')">Chevrolet</span> <input type="checkbox" name="marca_chevrolet"> <span class="toggle-icon" onclick="toggleModelos('chevrolet')">▼</span> <br>
+                <div id="chevrolet-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Cruze</span> <input type="checkbox" name="modelo_cruze"> <br><br>
+                </div>
 
-                <span>Volkswagen</span> <input type="checkbox" name="marca_volkswagen"> <br>
+                <span onclick="toggleModelos('volkswagen')">Volkswagen</span> <input type="checkbox" name="marca_volkswagen"> <span class="toggle-icon" onclick="toggleModelos('volkswagen')">▼</span> <br>
+                <div id="volkswagen-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Jetta</span> <input type="checkbox" name="modelo_jetta"> <br>
                 <span style="padding-left: 20px;">Golf</span> <input type="checkbox" name="modelo_golf"> <br><br>
+                </div>
 
-                <span>Mazda</span> <input type="checkbox" name="marca_mazda"> <br>
+                <span onclick="toggleModelos('mazda')">Mazda</span> <input type="checkbox" name="marca_mazda"> <span class="toggle-icon" onclick="toggleModelos('mazda')">▼</span> <br>
+                <div id="mazda-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">MX5</span> <input type="checkbox" name="modelo_mx5"> <br><br>
+                </div>
 
-                <span>Nissan</span> <input type="checkbox" name="marca_nissan"> <br>
+                <span onclick="toggleModelos('nissan')">Nissan</span> <input type="checkbox" name="marca_nissan"> <span class="toggle-icon" onclick="toggleModelos('nissan')">▼</span> <br>
+                <div id="nissan-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Versa</span> <input type="checkbox" name="modelo_versa"> <br>
                 <span style="padding-left: 20px;">Maxima</span> <input type="checkbox" name="modelo_maxima"> <br><br>
+                </div>
 
                 <!-- Inputs para filtrar por precio -->
                 <label for="minPrecio">Precio mínimo $:</label>
@@ -94,8 +116,8 @@
                     <p>Año: <?= $auto->Año ?></p>
                     <p>Precio: $<?= $auto->Precio ?></p>
                     <p>Descripción: <?= $auto->Descripción ?></p>
-                    <input type="button" value="Agregar al carrito">
-                    <input type="button" value="Comprar">
+                    <a href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a>
+                    <a href="AutoSelect.php?id=<?= $auto->ID ?>"><input type="button" value="Ver más"></a>
                 </div>
             <?php
             }
@@ -112,5 +134,7 @@
         echo "No se encontraron autos.";
     }
     ?>
+    <?php include 'Footer.php'; ?>
 </body>
+</main>
 </html>

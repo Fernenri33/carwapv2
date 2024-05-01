@@ -33,13 +33,13 @@ if (isset($_POST['todas'], $_POST['marca_toyota'], $_POST['modelo_yaris'], $_POS
     $maxAnio = $_POST['maxAnio'];
 
     $autoModelo = new Auto();
-    $autosFiltrados = $autoModelo->filtrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima,  $minPrecio, $maxPrecio, $minAnio, $maxAnio);
+    $autosFiltrados = $autoModelo->FiltrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima,  $minPrecio, $maxPrecio, $minAnio, $maxAnio);
     $autosJson = json_encode($autosFiltrados);
     header('Content-Type: application/json');
     echo $autosJson;
 } else {
     $autoModelo = new Auto();
-    $autosFiltrados = $autoModelo->filtrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima,  $minPrecio, $maxPrecio, $minAnio, $maxAnio);
+    $autosFiltrados = $autoModelo->FiltrarAutos($todas, $marca_toyota, $modelo_yaris, $modelo_corolla, $marca_honda, $modelo_civic, $marca_chevrolet, $modelo_cruze, $marca_volkswagen, $modelo_jetta, $modelo_golf, $marca_mazda, $modelo_mx5, $marca_nissan, $modelo_versa, $modelo_maxima,  $minPrecio, $maxPrecio, $minAnio, $maxAnio);
     $autosJson = json_encode($autosFiltrados);
     header('Content-Type: application/json');
     echo $autosJson;
