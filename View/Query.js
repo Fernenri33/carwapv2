@@ -72,7 +72,7 @@ $(document).ready(function() {
     // Función para enviar los datos al servidor sin recargar la página
     function enviarDatosSinRecargar(data) {
         // Construir la URL con los parámetros de datos
-        var url = "https://pike-gcc-louise-ss.trycloudflare.com/carwap/View/AutoView.php?data=" + encodeURIComponent(JSON.stringify(data));
+        var url = "http://localhost/carwap/View/AutoView.php?data=" + encodeURIComponent(JSON.stringify(data));
         
         // Redireccionar a AutoView.php con los datos como parámetros
         window.location.href = url;
