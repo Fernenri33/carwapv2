@@ -40,16 +40,13 @@
 
   .filter{
     width: 20%;
-    border: 1px solid #d7d8d8;
+    /* border: 1px solid #d7d8d8; */
     border-radius: 3px;
     margin-left: 20px;
     margin-right: 5px;
     padding: 10px;
     max-height: auto;
-    min-height: 550px !important;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    min-height: 550px;
   }
 
   @media (max-width: 895px) {
@@ -83,4 +80,14 @@
     }
     .toggle-icon {
     cursor: pointer;
+    }
+    .cardBody{
+      margin-left: 5px;
+    }
+    #filterForm{
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border: 1px solid #d7d8d8;
+      border-radius: 3px;
     }

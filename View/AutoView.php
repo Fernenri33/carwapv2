@@ -26,8 +26,8 @@
         <!-- Formulario de filtro -->
         <div class="filter">
             <form id="filterForm">
-                <p>Filtro</p>
-                <p>Marca</p>
+                <h2>Filtro</h2>
+                <h5>Marca</h5>
                 <!-- Crear checkbox para cada marca -->
                 <span>Todas</span> <input type="checkbox" name="todas"> <br><br>
 
@@ -69,7 +69,7 @@
                 <div id="nissan-modelos" class="modelo-lista">
                 <span style="padding-left: 20px;">Versa</span> <input type="checkbox" name="modelo_versa"> <br>
                 <span style="padding-left: 20px;">Maxima</span> <input type="checkbox" name="modelo_maxima"> <br><br>
-                </div>
+                </div><br>
 
                 <!-- Inputs para filtrar por precio -->
                 <label for="minPrecio">Precio mínimo $:</label>
@@ -112,12 +112,14 @@
             ?>
                 <div class="auto-card">
                     <img src="<?= $auto->ImagenURL ?>" alt="Imagen del auto">
-                    <h2><?= $auto->Marca ?> - <?= $auto->Modelo ?></h2>
-                    <p>Año: <?= $auto->Año ?></p>
-                    <p>Precio: $<?= $auto->Precio ?></p>
-                    <p>Descripción: <?= $auto->Descripción ?></p>
-                    <a href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a>
-                    <a href="AutoSelect.php?id=<?= $auto->ID ?>"><input type="button" value="Ver más"></a>
+                    <div class="cardBody">
+                        <h2><?= $auto->Marca ?> - <?= $auto->Modelo ?></h2>
+                        <p>Año: <?= $auto->Año ?></p>
+                        <p>Precio: $<?= $auto->Precio ?></p>
+                        <p>Descripción: <?= $auto->Descripción ?></p>
+                        <a href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a>
+                        <a href="AutoSelect.php?id=<?= $auto->ID ?>"><input type="button" value="Ver más"></a>
+                    </div>
                 </div>
             <?php
             }
