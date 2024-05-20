@@ -12,18 +12,19 @@
     <!-- Footer -->
     <footer class="footer">
         <div class ="logoFooter">
-
+            <img src="..\View\img\logo.jpg" alt="logo carwap" class="logoF">
         </div>
-        <img src="..\View\img\logo.jpg" alt="logo carwap" class="logoF">
+
         <div class="copy">
             <p> carwap &copy; 2024 - Todos los derechos reservados</p>
         </div>
-            
+           
         <div class ="social">
-        <img src="..\View\img\facebook.svg" alt="logo facebook" class="logoF">
-        <img src="..\View\img\twitter.svg" alt="logo twitter" class="logoF">
-        <img src="..\View\img\linkedin.svg" alt="logo in" class="logoF">
+        <img src="..\View\img\facebook.svg" alt="logo facebook" class="logoSocial">
+        <img src="..\View\img\twitter.svg" alt="logo twitter" class="logoSocial">
+        <img src="..\View\img\linkedin.svg" alt="logo in" class="logoSocial">
         </div>
+
     </footer>
 </body>
 </html>

@@ -7,11 +7,14 @@
     display: flex;
     align-items: center;
 }
-
-.a {
-    padding-right: 50px;
+.btn.btn-light{
+    margin-left: 30px;
 }
-
+.btn-light:hover{
+    background-color: #C9211E !important;
+    color: white !important;
+    border-color: #C9211E;
+}
 .log {
     margin-right: 10px; /* Mueve .log a la derecha */
     display: flex;
@@ -25,8 +28,12 @@
     flex-direction: row;
 }
 .navegador .a {
-    color:black; /* Cambia el color de fuente a rojo (#FF0000) como ejemplo */
+    color:black; 
 }
 .login {
     color:black;
+}
+.logobasket{
+    height: 50px;
+    margin-left: 10px;
 }

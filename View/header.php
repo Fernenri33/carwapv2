@@ -14,14 +14,18 @@
                 <a class="a" href="Building.php">
                     <img src="..\View\img\logo.jpg" alt="logo carwap" class="logo">
                 </a>
-                <a class="a" href="Building.php">Comprar</a>
-                <a class="a" href="Building.php">Vender</a>
-                <a class="a" href="Building.php">Conócenos</a>
+                <a href="AutoView.php"><input type="button" class="btn btn-light" value="Comprar"></a>
+                <a href="Building.php"><input type="button" class="btn btn-light" value="Vender"></a>
+                <a href="Building.php"><input type="button" class="btn btn-light" value="Conócenos"></a>
                 
             </nav>
             <div class="log">
-                <a class="login" href="Building.php">Iniciar sesión</a>
+                <a href="Building.php"><input type="button" class="btn btn-light" value="Iniciar sesión"></a>
+                <a href="Building.php">
+                    <img src="..\View\img\cart-fill.svg" alt="logo carwap" class="logobasket">
+                </a>
             </div> 
+    
         </header>
     </main>
 </body>
