@@ -6,10 +6,38 @@
     <title>Carrito</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/carwap/View/css/AutoSelectStyle.css">   
   </head>
 <body>
+    <style>
+        .TableContenedor{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .table.table-striped{
+            width: 100%;
+        }
+
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
 <?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // Redirigir a la página de login si el usuario no está logueado
+    echo("Logeese por favor");
+    header("Location: ../View/LoginView.php");
+    exit();
+}
+
+// echo($_SESSION['user_id']);
+// echo($_SESSION['user_name']);
+
+require_once '../Model/Database.php';
+require_once '../Model/Carrito.php';
+
 include 'Header.php';
 // Incluir la clase Auto
 require_once 'C:\xampp\htdocs\carwap\Model\Auto.php';
@@ -18,46 +46,56 @@ require_once 'C:\xampp\htdocs\carwap\Model\Auto.php';
 $auto_id = $_GET['id'] ?? null;
 
 // Verificar si se proporcionó un ID de auto
-if ($auto_id) {
-    // Crear una instancia de la clase Auto
+
+    $carrito = new Carrito();
+    $carritoItems = $carrito->GetCarritoByID($_SESSION['user_id']);
+
+    ?>
+    <div class="TableContenedor">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Año</th>
+        <th scope="col">Precio</th>    
+        <th scope="col">Eliminar</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+    <?php
+
     $autoVista = new Auto();
-    // Obtener el auto por su ID
-    $autos = $autoVista->GetByID($auto_id);
 
-    // Verificar si se encontraron autos
-    if (!empty($autos)) {
-        // Iterar sobre cada auto y mostrar sus detalles
-        foreach ($autos as $auto) {
-            ?>
-            <div class = "titleAS">
-              <h1 class = "mainTitle"><?= $auto->Marca . '-' . $auto->Modelo ?></h1>
-            </div>
+        foreach ($carritoItems as $carritoItem) {
             
-            <div class="container">
-                <div class="card">
-                    <img src="<?= $auto->ImagenURL ?>" class="card-img-top" alt="Imagen del auto">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $auto->Marca . ' ' . $auto->Modelo ?></h5>
-                        <p class="card-text">Año: <?= $auto->Año ?></p>
-                        <p class="card-text">Precio: <?= $auto->Precio ?></p>
-                        <p class="card-text"><?= $auto->Descripción ?></p>
-                        <a class="buttonAS" href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a><p></p>
-                        
-                        <a class="buttonAS" href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Comprar"></a>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
+                $carritoItem->AutoID;
+                $carritoItem->Precio;
+                $autos = $autoVista->GetByID($carritoItem->AutoID);
 
-    } else {
-        echo "<p>No se encontraron autos.</p>";
-    }
-} else {
-    echo "<p>No se proporcionó un ID de auto.</p>";
-}
+                if (!empty($autos)) {
+                    foreach ($autos as $auto) {
+                        ?>
+                            <tr>
+                            <td><?= $auto->Marca?></td>
+                            <td><?= $auto->Modelo?></td>
+                            <td><?= $auto->Año?></td>
+                            <td><?= $auto->Precio?></td>
+                            <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                            </tr>
+                        <?php
+                    }
+
+                } else {
+                    echo "<p>No se encontraron autos.</p>";
+                }
+        }
 ?>
+            </tbody>
+        </table>
+    </div>
+
 <?php include 'Footer.php'; ?>
 </body>
 </html>

@@ -40,9 +40,6 @@ class User {
         return $users;
       }
 
-    //   public function SearchUser(){
-        
-    //   }
     }
 
 ?>
