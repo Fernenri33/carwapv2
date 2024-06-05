@@ -1,0 +1,39 @@
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+}
+.btn.btn-light{
+    margin-left: 30px;
+}
+.btn-light:hover{
+    background-color: #C9211E !important;
+    color: white !important;
+    border-color: #C9211E;
+}
+.log {
+    margin-right: 10px; /* Mueve .log a la derecha */
+    display: flex;
+    align-items: center;
+}
+
+.divHeader {
+    background-color: #d7d8d8;
+    display: flex;
+    justify-content: space-between; /* Asegúrate de que haya espacio entre los elementos */
+    flex-direction: row;
+}
+.navegador .a {
+    color:black; 
+}
+.login {
+    color:black;
+}
+.logobasket{
+    height: 50px;
+    margin-left: 10px;
+}
