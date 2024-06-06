@@ -2,9 +2,15 @@
 // Define la clase Database
 class Database {
   // Declara las propiedades privadas para los detalles de la base de datos
+<<<<<<< HEAD
   private $servername = "localhost";
   private $username = "root";
   private $password = "22067000";
+=======
+  private $servername = "127.0.0.1";
+  private $username = "root";
+  private $password = "";
+>>>>>>> master
   private $dbname = "carwap";
   // Declara la propiedad pública para la conexión a la base de datos
   public $conn;

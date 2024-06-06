@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 include 'Header.php';
 
@@ -16,27 +14,20 @@ if (!isset($_SESSION['user_id'])) {
 
 $carrito = new Carrito();
 $user_id = $_SESSION['user_id'];
-$carritoItems = $carrito->GetCarritoByID($user_id); // Obtener los elementos del carrito del usuario
 
-$autoVista = new Auto();
 $carritoItems = $carrito->GetCarritoByID($_SESSION['user_id']);
 
+$auto_id = $_GET['id'] ?? null;
+$autoVista = new Auto();
+$autos = $autoVista->GetByID($auto_id);
 ?>
 
->>>>>>> master
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-<<<<<<< HEAD
-</head>
-<body>
-    
-</body>
-</html>
-=======
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Estilo adicional */
@@ -60,21 +51,19 @@ $carritoItems = $carrito->GetCarritoByID($_SESSION['user_id']);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($carritoItems as $carritoItem): ?>
+                    <?php foreach ($autos as $autoC): ?>
                         <?php 
-                        $autos = $autoVista->GetByID($carritoItem->AutoID);
-                        if (!empty($autos)) {
-                            foreach ($autos as $auto) {
+
                                 ?>
                                 <tr>
-                                    <td><?= $auto->Marca ?></td>
-                                    <td><?= $auto->Modelo ?></td>
-                                    <td><?= $auto->Año ?></td>
-                                    <td>$<?= $auto->Precio ?></td>
+                                    <td><?= $autoC->Marca ?></td>
+                                    <td><?= $autoC->Modelo ?></td>
+                                    <td><?= $autoC->Año ?></td>
+                                    <td>$<?= $autoC->Precio ?></td>
                                 </tr>
                                 <?php
-                            }
-                        }
+                            
+                        
                         ?>
                     <?php endforeach; ?>
                 </tbody>
@@ -95,4 +84,3 @@ $carritoItems = $carrito->GetCarritoByID($_SESSION['user_id']);
 </body>
 </html>
 
->>>>>>> master

@@ -1,9 +1,29 @@
+<<<<<<< HEAD
+=======
+<?php
+
+session_start(); // Asegúrate de que la sesión esté iniciada
+
+// Verifica si la sesión está abierta
+if (isset($_SESSION['user_id'])) {
+    $linkText = "Ver perfil";
+    $linkUrl = "Perfil.php"; // Cambia esto al URL correcto de la página de perfil
+} else {
+    $linkText = "Iniciar sesión";
+    $linkUrl = "../View/LoginView.php"; // URL de la página de inicio de sesión
+}
+?>
+
+>>>>>>> master
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Header</title>
+=======
+>>>>>>> master
     <link rel="stylesheet" href="http://localhost/carwap/View/css/headerstyle.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -17,16 +37,29 @@
                 <a href="AutoView.php"><input type="button" class="btn btn-light" value="Comprar"></a>
                 <a href="Vender.php"><input type="button" class="btn btn-light" value="Vender"></a>
                 <a href="Conocenos.php"><input type="button" class="btn btn-light" value="Conócenos"></a>
+<<<<<<< HEAD
                 
             </nav>
             <div class="log">
                 <a href="../View/LoginView.php"><input type="button" class="btn btn-light" value="Iniciar sesión"></a>
+=======
+            </nav>
+            <div class="log">
+                <a href="<?= $linkUrl ?>"><input type="button" class="btn btn-light" value="<?= $linkText ?>"></a>
+>>>>>>> master
                 <a href="../View/CarritoView.php">
                     <img src="..\View\img\cart-fill.svg" alt="logo carwap" class="logobasket">
                 </a>
             </div> 
+<<<<<<< HEAD
     
+=======
+>>>>>>> master
         </header>
     </main>
 </body>
 </html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master

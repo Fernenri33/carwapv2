@@ -62,5 +62,69 @@
                 return null;
             }
         }
+<<<<<<< HEAD
+=======
+
+        public function createCarrito($UsuarioID, $AutoID, $Precio) {
+            $sql = "INSERT INTO carrito (UsuarioID, AutoID, Precio) VALUES (?, ?, ?)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("iid", $UsuarioID, $AutoID, $Precio);
+    
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function deleteCarritoByID($id) {
+            $sql = "DELETE FROM carrito WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("i", $id);
+    
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function existsInCarrito($usuarioID, $autoID) {
+            $sql = "SELECT * FROM carrito WHERE UsuarioID = ? AND AutoID = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("ii", $usuarioID, $autoID);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        
+            if ($result->num_rows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function buscarCarrito($id) {
+            $sqlSelect = "SELECT * FROM carrito";
+            $result = $this->conn->query($sqlSelect);
+            $carritoElementos = array();
+        
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $carrito = new Carrito();
+                    $carrito->setID($row['id']);
+                    $carrito->setUsuarioID($row['UsuarioID']);
+                    $carrito->setAutoID($row['AutoID']);
+                    $carrito->setPrecio($row['Precio']);
+                    
+                    $carritoElementos[] = $carrito;
+                }
+                return $carritoElementos;
+            } else {
+                return null;
+            }
+        }
+        
+        
+>>>>>>> master
     }
 ?>

@@ -117,6 +117,10 @@
                         <p>Año: <?= $auto->Año ?></p>
                         <p>Precio: $<?= $auto->Precio ?></p>
                         <p>Descripción: <?= $auto->Descripción ?></p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
                         <a href="CarritoView.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a>
                         <a href="AutoSelect.php?id=<?= $auto->ID ?>"><input type="button" value="Ver más"></a>
                     </div>

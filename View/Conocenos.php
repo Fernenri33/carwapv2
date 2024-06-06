@@ -6,12 +6,16 @@
     <title>Conócenos - Tienda de Autos Usados</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+<<<<<<< HEAD
         h1, h2 {
             margin-bottom: 20px;
         }
         .card {
             margin-bottom: 20px;
         }
+=======
+
+>>>>>>> master
     </style>
 </head>
 <body>
@@ -32,12 +36,20 @@
             <p>En Tienda de Autos Usados, comenzamos con una simple idea: ofrecer vehículos de calidad a precios accesibles. Desde nuestros humildes comienzos, hemos crecido hasta convertirnos en una de las tiendas en línea más confiables para la compra de autos usados. Nuestro compromiso con la satisfacción del cliente y la transparencia en cada transacción nos ha distinguido en la industria.</p>
         </div>
         <div class="col-md-6">
+<<<<<<< HEAD
             <img src="img/our_story.jpg" alt="Nuestra Historia" class="img-fluid rounded">
+=======
+            <img src="https://st2.depositphotos.com/5420166/8686/i/450/depositphotos_86865802-stock-photo-new-cars-for-sale-parked.jpg" alt="Nuestra Historia" class="img-fluid rounded">
+>>>>>>> master
         </div>
     </div>
     <div class="row mt-4">
         <div class="col-md-6">
+<<<<<<< HEAD
             <img src="img/our_mission.jpg" alt="Nuestra Misión" class="img-fluid rounded">
+=======
+            <img src="https://phantom-expansion.unidadeditorial.es/df72c06e7088b5663b8635c42ed46be7/crop/117x0/2048x1287/resize/414/f/jpg/assets/multimedia/imagenes/2021/08/07/16282878244043.jpg" alt="Nuestra Misión" class="img-fluid rounded">
+>>>>>>> master
         </div>
         <div class="col-md-6">
             <h2>Nuestra Misión</h2>
@@ -55,12 +67,20 @@
             </ul>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
 
 <!-- Pie de página -->
 <footer>
 <?php include 'Footer.php';?>
 </footer>
+=======
+</div><br>
+
+<!-- Pie de página -->
+
+<?php include 'Footer.php';?>
+>>>>>>> master
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
