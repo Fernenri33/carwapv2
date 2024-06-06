@@ -29,7 +29,7 @@
                 <div class="form-group form-check">
                 </div>
                 <input type="submit" value="Enviar" class="btn btn-primary">
-                <button type="button" class="btn btn-secondary" onclick="showRegisterForm()">Crear cuenta</button>
+                <!-- <button type="button" class="btn btn-secondary" onclick="showRegisterForm()">Crear cuenta</button> -->
             </form>
         </div>
 

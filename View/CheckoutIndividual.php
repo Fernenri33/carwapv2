@@ -70,7 +70,7 @@ $autos = $autoVista->GetByID($auto_id);
             </table>
         </div>
         
-        <a href="procesar_pedido.php" class="btn btn-primary">Confirmar compra</a>
+        <a href="CompraExitosa.php" class="btn btn-primary">Confirmar compra</a>
         <a href="CarritoView.php" class="btn btn-secondary">Volver al carrito</a>
     </div>
 

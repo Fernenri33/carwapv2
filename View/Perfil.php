@@ -23,9 +23,9 @@ if(isset($_POST['cerrar_sesion'])) {
             <h3>Bienvenido, <?php echo $_SESSION['user_name'] . ' ' . $_SESSION['user_apellido']; ?></h3>
             <p>Tu correo electrónico es: <?php echo $_SESSION['user_mail']; ?></p><br>
 
-            <a class="btn btn-info" href="http://localhost/carwap/View/CarritoView.php">Ir a Catálogo</a>
+            <a class="btn btn-info" href="http://localhost/carwap/View/CarritoView.php">Ver carrito</a>
 
-            <a class="btn btn-success" href="http://localhost/carwap/View/AutoView.php">Ver carrito</a><br><br>
+            <a class="btn btn-success" href="http://localhost/carwap/View/AutoView.php">Ir a Catálogo</a><br><br>
 
             <form method="post">
                 <button type="submit" name="cerrar_sesion" class="btn btn-danger">Cerrar sesión</button>

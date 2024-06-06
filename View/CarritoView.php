@@ -113,37 +113,43 @@ require_once '../Model/Auto.php';
 
     $autoVista = new Auto();
 
+    if (!empty($carritoItems)) {
+
         foreach ($carritoItems as $carritoItem) {
             
-                $carritoItem->AutoID;
-                $carritoItem->Precio;
-                $autos = $autoVista->GetByID($carritoItem->AutoID);
+            $carritoItem->AutoID;
+            $carritoItem->Precio;
+            $autos = $autoVista->GetByID($carritoItem->AutoID);
 
-                if (!empty($autos)) {
-                    foreach ($autos as $auto) {
-                        ?>
-                            <tr>
-                            <td><?= $auto->Marca?></td>
-                            <td><?= $auto->Modelo?></td>
-                            <td><?= $auto->Año?></td>
-                            <td><?= $auto->Precio?></td>
+            if (!empty($autos)) {
+                foreach ($autos as $auto) {
+                    ?>
+                        <tr>
+                        <td><?= $auto->Marca?></td>
+                        <td><?= $auto->Modelo?></td>
+                        <td><?= $auto->Año?></td>
+                        <td><?= $auto->Precio?></td>
 
-                            <td>
-                                <a class="btn btn-success" href="CheckoutIndividual.php?id=<?= $carritoItem->AutoID ?>">Comprar</a>
-                            </td>
-                            
-                            <td>
-                                <a class="btn btn-danger" href="DeleteCarrito.php?id=<?= $carritoItem->ID ?>">Eliminar</a>
-                            </td>
+                        <td>
+                            <a class="btn btn-success" href="CheckoutIndividual.php?id=<?= $carritoItem->AutoID ?>">Comprar</a>
+                        </td>
+                        
+                        <td>
+                            <a class="btn btn-danger" href="DeleteCarrito.php?id=<?= $carritoItem->ID ?>">Eliminar</a>
+                        </td>
 
-                            </tr>
-                        <?php
-                    }
-
-                } else {
-                    echo "<p>No se encontraron autos.</p>";
+                        </tr>
+                    <?php
                 }
+
+            } else {
+                echo "<p>No se encontraron autos.</p>";
+            }
         }
+    }else {
+
+    }
+        
 ?>
             </tbody>
         </table>
