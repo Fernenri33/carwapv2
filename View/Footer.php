@@ -3,12 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Footer</title>
-    <link rel="stylesheet" href="http://localhost/carwap/View/css/Footerstyle.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-=======
     <link rel="stylesheet" href="http://localhost/carwap/View/css/Footerstyle.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -21,7 +15,6 @@
     }
     
 </style>
->>>>>>> master
 <body>
 
     <!-- Footer -->

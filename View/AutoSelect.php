@@ -41,16 +41,10 @@ if ($auto_id) {
                         <p class="card-text">Año: <?= $auto->Año ?></p>
                         <p class="card-text">Precio: <?= $auto->Precio ?></p>
                         <p class="card-text"><?= $auto->Descripción ?></p>
-<<<<<<< HEAD
-                        <a class="buttonAS" href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a><p></p>
-                        
-                        <a class="buttonAS" href="Building.php?id=<?= $auto->ID ?>"><input type="button" value="Comprar"></a>
-=======
 
                         <a class="buttonAS" href="CarritoView.php?id=<?= $auto->ID ?>"><input type="button" value="Agregar al carrito"></a><p></p>
                         
                         <a class="buttonAS" href="CheckoutIndividual.php?id=<?= $auto->ID ?>"><input type="button" value="Comprar"></a>
->>>>>>> master
                     </div>
                 </div>
             </div>

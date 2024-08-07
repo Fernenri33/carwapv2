@@ -12,14 +12,10 @@
     justify-content: center;
 }
     form{
-<<<<<<< HEAD
-        width: 70%;
-=======
         margin-top: 40px;
         padding: 30px;
         width: 60%;
         background-color: #D7D8D8;
->>>>>>> master
     }
     </style>
 <?php include 'Header.php';?>
@@ -28,12 +24,6 @@
 <div class="contenedorVenta">
 
     <form>
-<<<<<<< HEAD
-    <br>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Nombre completo del dueño</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-=======
 
     <h3>Formulario para vender su vehículo</h3>
     <h6>Nos pondremos en contacto con usted</h6>
@@ -41,7 +31,6 @@
     <div class="form-group">
         <label for="exampleInputPassword1">Nombre completo del dueño</label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre">
->>>>>>> master
         </div>
 
         <div class="form-group">
@@ -64,11 +53,7 @@
         <label for="exampleInputPassword1">Modelo</label>
         <label for="exampleInputPassword1">Marca del auto</label>
             <select class="form-control">
-<<<<<<< HEAD
-                <option>Ottro modelo</option>
-=======
                 <option>Otro modelo</option>
->>>>>>> master
                 <option>Corolla</option>
                 <option>Yaris</option>
                 <option>mx-5</option>
@@ -79,25 +64,12 @@
 
         <div class="form-group">
         <label for="exampleInputPassword1">Año</label>
-<<<<<<< HEAD
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-=======
         <input type="number" class="form-control" id="yearInput" name="year" min="1900" max="2024" step="1" required>
->>>>>>> master
         </div>
 
         <div class="form-group">
         <label for="exampleInputPassword1">Dirección donde se encuantra el auto</label>
-<<<<<<< HEAD
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-
-        <div class="form-group">
-        <label for="exampleInputPassword1">Correo</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-=======
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle principal 433">
->>>>>>> master
         </div>
 
         <div class="form-group">
@@ -110,10 +82,7 @@
         <input type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
 
-<<<<<<< HEAD
-=======
         <a class="btn btn-success" href="CheckoutView.php">Enviar</a>
->>>>>>> master
     </form>
     </div>
 

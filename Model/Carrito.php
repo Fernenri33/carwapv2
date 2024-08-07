@@ -62,8 +62,6 @@
                 return null;
             }
         }
-<<<<<<< HEAD
-=======
 
         public function createCarrito($UsuarioID, $AutoID, $Precio) {
             $sql = "INSERT INTO carrito (UsuarioID, AutoID, Precio) VALUES (?, ?, ?)";
@@ -125,6 +123,5 @@
         }
         
         
->>>>>>> master
     }
 ?>

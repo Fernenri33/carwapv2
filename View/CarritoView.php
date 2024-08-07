@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 include 'Header.php';
 // session_start();
@@ -56,7 +54,6 @@ require_once '../Model/Auto.php';
 
     ?>
 
->>>>>>> master
 <!DOCTYPE html>
 <!-- CarritoView.php -->
 <html lang="es">
@@ -80,38 +77,6 @@ require_once '../Model/Auto.php';
         .table th, .table td {
             text-align: center;
         }
-<<<<<<< HEAD
-    </style>
-<?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    // Redirigir a la página de login si el usuario no está logueado
-    echo("Logeese por favor");
-    header("Location: ../View/LoginView.php");
-    exit();
-}
-
-// echo($_SESSION['user_id']);
-// echo($_SESSION['user_name']);
-
-require_once '../Model/Database.php';
-require_once '../Model/Carrito.php';
-
-include 'Header.php';
-// Incluir la clase Auto
-require_once 'C:\xampp\htdocs\carwap\Model\Auto.php';
-
-// Obtener el ID del auto desde la URL
-$auto_id = $_GET['id'] ?? null;
-
-// Verificar si se proporcionó un ID de auto
-
-    $carrito = new Carrito();
-    $carritoItems = $carrito->GetCarritoByID($_SESSION['user_id']);
-
-    ?>
-=======
         footer {
             position: fixed;
             bottom: 0;
@@ -128,7 +93,6 @@ $auto_id = $_GET['id'] ?? null;
         <?= $message ?>
     <?php endif; ?>
 
->>>>>>> master
     <div class="TableContenedor">
     <table class="table table-striped">
         <thead>
@@ -136,46 +100,14 @@ $auto_id = $_GET['id'] ?? null;
         <th scope="col">Marca</th>
         <th scope="col">Modelo</th>
         <th scope="col">Año</th>
-<<<<<<< HEAD
-        <th scope="col">Precio</th>    
-=======
         <th scope="col">Precio</th>
         <th scope="col">Comprar</th>
->>>>>>> master
         <th scope="col">Eliminar</th>
         </tr>
         </thead>
         <tbody>
         
     <?php
-<<<<<<< HEAD
-
-    $autoVista = new Auto();
-
-        foreach ($carritoItems as $carritoItem) {
-            
-                $carritoItem->AutoID;
-                $carritoItem->Precio;
-                $autos = $autoVista->GetByID($carritoItem->AutoID);
-
-                if (!empty($autos)) {
-                    foreach ($autos as $auto) {
-                        ?>
-                            <tr>
-                            <td><?= $auto->Marca?></td>
-                            <td><?= $auto->Modelo?></td>
-                            <td><?= $auto->Año?></td>
-                            <td><?= $auto->Precio?></td>
-                            <td><button type="button" class="btn btn-danger">Eliminar</button></td>
-                            </tr>
-                        <?php
-                    }
-
-                } else {
-                    echo "<p>No se encontraron autos.</p>";
-                }
-        }
-=======
 // Obtener el ID del auto desde la URL
 
 
@@ -218,15 +150,10 @@ $auto_id = $_GET['id'] ?? null;
 
     }
         
->>>>>>> master
 ?>
             </tbody>
         </table>
     </div>
-<<<<<<< HEAD
-
-<?php include 'Footer.php'; ?>
-=======
     <br><br>
 
 
@@ -245,6 +172,5 @@ $auto_id = $_GET['id'] ?? null;
 <?php include 'Footer.php'; ?>
 </footer>
 
->>>>>>> master
 </body>
 </html>

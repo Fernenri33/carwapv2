@@ -27,17 +27,9 @@
                     <input type="password" name="LoginPassword" class="form-control" id="loginInputPassword1" placeholder="Contraseña">
                 </div>
                 <div class="form-group form-check">
-<<<<<<< HEAD
-                    <input type="checkbox" class="form-check-input" id="loginCheck1">
-                    <label class="form-check-label" for="loginCheck1">Recuérdame</label>
-                </div>
-                <input type="submit" value="Enviar" class="btn btn-primary">
-                <button type="button" class="btn btn-secondary" onclick="showRegisterForm()">Crear cuenta</button>
-=======
                 </div>
                 <input type="submit" value="Enviar" class="btn btn-primary">
                 <!-- <button type="button" class="btn btn-secondary" onclick="showRegisterForm()">Crear cuenta</button> -->
->>>>>>> master
             </form>
         </div>
 
